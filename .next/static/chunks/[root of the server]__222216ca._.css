@@ -117,6 +117,7 @@
   :root, :host {
     --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --color-yellow-400: oklch(85.2% .199 91.936);
     --color-yellow-500: oklch(79.5% .184 86.047);
     --color-green-400: oklch(79.2% .209 151.711);
     --color-emerald-500: oklch(69.6% .17 162.48);
@@ -811,6 +812,10 @@
     height: calc(var(--spacing) * 10);
   }
 
+  .h-12 {
+    height: calc(var(--spacing) * 12);
+  }
+
   .h-16 {
     height: calc(var(--spacing) * 16);
   }
@@ -909,6 +914,10 @@
 
   .w-\[40\%\] {
     width: 40%;
+  }
+
+  .w-auto {
+    width: auto;
   }
 
   .w-fit {
@@ -1259,10 +1268,6 @@
     border-top-color: #0000;
   }
 
-  .bg-\[\#9D00FF\] {
-    background-color: #9d00ff;
-  }
-
   .bg-\[\#102C46\] {
     background-color: #102c46;
   }
@@ -1378,6 +1383,16 @@
   @supports (color: color-mix(in lab, red, red)) {
     .bg-primary\/25 {
       background-color: color-mix(in oklab, var(--color-primary) 25%, transparent);
+    }
+  }
+
+  .bg-primary\/80 {
+    background-color: #99e39ecc;
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .bg-primary\/80 {
+      background-color: color-mix(in oklab, var(--color-primary) 80%, transparent);
     }
   }
 
@@ -1569,6 +1584,10 @@
 
   .fill-current {
     fill: currentColor;
+  }
+
+  .object-contain {
+    object-fit: contain;
   }
 
   .object-cover {
@@ -1966,6 +1985,10 @@
     white-space: nowrap;
   }
 
+  .text-\[\#800080\] {
+    color: purple;
+  }
+
   .text-black {
     color: var(--color-black);
   }
@@ -2038,6 +2061,10 @@
     .text-white\/60 {
       color: color-mix(in oklab, var(--color-white) 60%, transparent);
     }
+  }
+
+  .text-yellow-400 {
+    color: var(--color-yellow-400);
   }
 
   .text-yellow-500 {
@@ -2673,6 +2700,18 @@
   }
 
   @media (width >= 48rem) {
+    .md\:h-10 {
+      height: calc(var(--spacing) * 10);
+    }
+  }
+
+  @media (width >= 48rem) {
+    .md\:h-14 {
+      height: calc(var(--spacing) * 14);
+    }
+  }
+
+  @media (width >= 48rem) {
     .md\:w-5\/12 {
       width: 41.6667%;
     }
@@ -3006,6 +3045,12 @@
   @media (width >= 64rem) {
     .lg\:hidden {
       display: none;
+    }
+  }
+
+  @media (width >= 64rem) {
+    .lg\:h-16 {
+      height: calc(var(--spacing) * 16);
     }
   }
 

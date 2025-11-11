@@ -37,7 +37,7 @@ const TimeLine = () => {
             <div className='md:block hidden relative'>
               <div>
                 <Image
-                  src='/images/timeline/img-timeline.png'
+                  src='/images/timeline/imgg.png'
                   alt='image'
                   width={1220}
                   height={1000}
@@ -109,7 +109,7 @@ const TimeLine = () => {
                     Support
                   </h5>
                   <p className='text-18 text-muted/60'>
-                  Deploy product live and ensure expert support
+                  Support staff for healthcare facilities
                   </p>
                 </div>
               </div>

@@ -59,10 +59,10 @@ const CardSlider = () => {
     <div className='pt-14 flex flex-col gap-10'>
       <div className='flex flex-col gap-3 items-center justify-center text-center'>
         <p className='text-white font-medium'>
-          Featured <span className='text-primary'>crypto coins</span>
+          Featured <span className='text-primary'>VikarIn</span>
         </p>
         <h2 className='sm:text-40 text-30 text-white font-medium'>
-          Top crypto coins updates
+          Why choose Vikarin?
         </h2>
       </div>
 
@@ -70,7 +70,7 @@ const CardSlider = () => {
         {pricedeta.map((item, index) => (
           <div key={index} className='pr-6'>
             <div className='px-5 py-6 bg-dark_grey/80 rounded-xl'>
-              <div className='flex flex-col items-center gap-5'>
+              <div className='flex flex-col items-center gap-5 '>
                 <div className={`${item.background} ${item.padding} rounded-full`}>
                   <Image
                     src={item.icon}

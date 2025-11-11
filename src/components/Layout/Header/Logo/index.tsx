@@ -4,14 +4,17 @@ import Link from "next/link";
 const Logo: React.FC = () => {
   return (
     <Link href="/">
-      <Image
-        src="/images/logo/logo.svg"
-        alt="logo"
-        width={135}
-        height={32}
-        style={{ width: "auto", height: "auto" }}
-        quality={100}
-      />
+  <Image
+  src="/images/logo/19.png"
+  alt="Vikarin logo"
+  width={200}
+  height={60}
+  className="object-contain w-auto h-12 md:h-14 lg:h-16"
+  priority
+  quality={100}
+/>
+
+
     </Link>
   );
 };
