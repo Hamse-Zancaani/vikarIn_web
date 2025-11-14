@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 'use client'
 
-import { HTMLMotionProps } from "motion/react"
+import { HTMLMotionProps } from "framer-motion"
 import { motion } from "framer-motion"
 
 export default function TextBlurEffect({ children, ...props }: { children: string } & HTMLMotionProps<'span'>) {
