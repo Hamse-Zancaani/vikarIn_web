@@ -81,7 +81,7 @@ const CardSlider = () => {
                 </div>
                 <p className='text-white text-xs font-normal '>
                   <span className='text-16 font-bold mr-2'>{item.title}</span>
-                  {item.short}
+                  
                 </p>
               </div>
               {/* <div className='flex justify-center mt-2'>
