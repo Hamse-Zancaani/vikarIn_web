@@ -117,12 +117,12 @@
   :root, :host {
     --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    --color-yellow-400: oklch(85.2% .199 91.936);
     --color-yellow-500: oklch(79.5% .184 86.047);
     --color-green-400: oklch(79.2% .209 151.711);
     --color-emerald-500: oklch(69.6% .17 162.48);
     --color-blue-600: oklch(54.6% .245 262.881);
     --color-blue-700: oklch(48.8% .243 264.376);
+    --color-blue-800: oklch(42.4% .199 265.638);
     --color-gray-200: oklch(92.8% .006 264.531);
     --color-gray-400: oklch(70.7% .022 261.325);
     --color-gray-500: oklch(55.1% .027 264.364);
@@ -167,6 +167,7 @@
     --radius-3xl: 1.5rem;
     --ease-in-out: cubic-bezier(.4, 0, .2, 1);
     --animate-spin: spin 1s linear infinite;
+    --animate-pulse: pulse 2s cubic-bezier(.4, 0, .6, 1) infinite;
     --blur-xs: 4px;
     --blur-md: 12px;
     --default-transition-duration: .15s;
@@ -405,6 +406,10 @@
 }
 
 @layer utilities {
+  .pointer-events-none {
+    pointer-events: none;
+  }
+
   .visible {
     visibility: visible;
   }
@@ -419,6 +424,10 @@
 
   .relative {
     position: relative;
+  }
+
+  .inset-0 {
+    inset: calc(var(--spacing) * 0);
   }
 
   .inset-x-10 {
@@ -517,8 +526,8 @@
     z-index: 99999;
   }
 
-  .z-999999 {
-    z-index: 999999;
+  .z-\[9999\] {
+    z-index: 9999;
   }
 
   .col-span-6 {
@@ -816,6 +825,10 @@
     height: calc(var(--spacing) * 12);
   }
 
+  .h-14 {
+    height: calc(var(--spacing) * 14);
+  }
+
   .h-16 {
     height: calc(var(--spacing) * 16);
   }
@@ -842,10 +855,6 @@
 
   .h-px {
     height: 1px;
-  }
-
-  .h-screen {
-    height: 100vh;
   }
 
   .max-h-0 {
@@ -878,6 +887,10 @@
 
   .w-10 {
     width: calc(var(--spacing) * 10);
+  }
+
+  .w-12 {
+    width: calc(var(--spacing) * 12);
   }
 
   .w-16 {
@@ -926,10 +939,6 @@
 
   .w-full {
     width: 100%;
-  }
-
-  .w-screen {
-    width: 100vw;
   }
 
   .max-w-12 {
@@ -985,6 +994,10 @@
 
   .transform {
     transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
+  }
+
+  .animate-pulse {
+    animation: var(--animate-pulse);
   }
 
   .animate-spin {
@@ -1192,6 +1205,10 @@
     border-style: solid;
   }
 
+  .border-blue-800 {
+    border-color: var(--color-blue-800);
+  }
+
   .border-border\/20 {
     border-color: #e1e1e133;
   }
@@ -1220,6 +1237,10 @@
     .border-dark_border\/60 {
       border-color: color-mix(in oklab, var(--color-dark_border) 60%, transparent);
     }
+  }
+
+  .border-gray-200 {
+    border-color: var(--color-gray-200);
   }
 
   .border-primary {
@@ -1383,16 +1404,6 @@
   @supports (color: color-mix(in lab, red, red)) {
     .bg-primary\/25 {
       background-color: color-mix(in oklab, var(--color-primary) 25%, transparent);
-    }
-  }
-
-  .bg-primary\/80 {
-    background-color: #99e39ecc;
-  }
-
-  @supports (color: color-mix(in lab, red, red)) {
-    .bg-primary\/80 {
-      background-color: color-mix(in oklab, var(--color-primary) 80%, transparent);
     }
   }
 
@@ -1985,10 +1996,6 @@
     white-space: nowrap;
   }
 
-  .text-\[\#800080\] {
-    color: purple;
-  }
-
   .text-black {
     color: var(--color-black);
   }
@@ -2063,10 +2070,6 @@
     }
   }
 
-  .text-yellow-400 {
-    color: var(--color-yellow-400);
-  }
-
   .text-yellow-500 {
     color: var(--color-yellow-500);
   }
@@ -2087,8 +2090,16 @@
     text-underline-offset: 4px;
   }
 
+  .opacity-0 {
+    opacity: 0;
+  }
+
   .opacity-60 {
     opacity: .6;
+  }
+
+  .opacity-100 {
+    opacity: 1;
   }
 
   .shadow-lg {
@@ -2160,6 +2171,12 @@
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
 
+  .transition-opacity {
+    transition-property: opacity;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+
   .transition-transform {
     transition-property: transform, translate, scale, rotate;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
@@ -2179,6 +2196,11 @@
   .duration-500 {
     --tw-duration: .5s;
     transition-duration: .5s;
+  }
+
+  .duration-700 {
+    --tw-duration: .7s;
+    transition-duration: .7s;
   }
 
   .ease-in-out {
@@ -2696,12 +2718,6 @@
   @media (width >= 48rem) {
     .md\:hidden {
       display: none;
-    }
-  }
-
-  @media (width >= 48rem) {
-    .md\:h-10 {
-      height: calc(var(--spacing) * 10);
     }
   }
 
@@ -3897,6 +3913,12 @@ section {
 @keyframes spin {
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  50% {
+    opacity: .5;
   }
 }
 
