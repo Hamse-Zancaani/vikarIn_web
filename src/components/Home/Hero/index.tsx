@@ -66,7 +66,7 @@ const Hero = () => {
                 </div>
               </div>
               <h1 className='font-medium xl:text-[72px] lg:text-6xl md:text-54 sm:text-5xl text-4xl md:text-start text-center text-white'>
-                Your cooperation partner
+                Fast and Secure healthcare 
               </h1>
               <p className='text-white'>When you choose Vikarin as your partner, you get qualified temporary workers for the healthcare sector around the clock.</p>
             </div>

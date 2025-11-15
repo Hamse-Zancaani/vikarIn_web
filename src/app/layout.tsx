@@ -5,6 +5,7 @@ import Footer from '@/components/Layout/Footer'
 import { ThemeProvider } from 'next-themes'
 import ScrollToTop from '@/components/ScrollToTop'
 import Aoscompo from '@/utils/aos'
+import Preloader from '@/components/preloader'
 
 const font = DM_Sans({ subsets: ['latin'] })
 
@@ -21,6 +22,7 @@ export default function RootLayout({
           enableSystem={true}
           defaultTheme='system'>
           <Aoscompo>
+            <Preloader />
             <Header />
             {children}
             <Footer />

@@ -33,7 +33,7 @@ export const pricedeta: {
   },
   {
     title: "Fixed rate per hour",
-    icon: "/images/icons/66.png",
+    icon: "/images/icons/3.png",
     background: "bg-warning/20",
     width: 46,
     height: 43,

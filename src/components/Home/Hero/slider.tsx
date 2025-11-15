@@ -70,8 +70,8 @@ const CardSlider = () => {
         {pricedeta.map((item, index) => (
           <div key={index} className='pr-6'>
             <div className='px-5 py-6 bg-dark_grey/80 rounded-xl'>
-              <div className='flex flex-col items-center gap-5 '>
-                <div className={`${item.background} ${item.padding} rounded-full`}>
+              <div className='flex flex-col items-center gap-5  '>
+                <div className={`${item.background} ${item.padding} rounded-full bg-white`}>
                   <Image
                     src={item.icon}
                     alt={`${item.title} icon`}

@@ -12,6 +12,7 @@
     "@iconify/icons-ion": "^1.2.10",
     "@iconify/react": "^5.2.1",
     "@radix-ui/react-slot": "^1.2.4",
+    "@tabler/icons-react": "^3.35.0",
     "aos": "^2.3.4",
     "axios": "^1.8.4",
     "class-variance-authority": "^0.7.1",

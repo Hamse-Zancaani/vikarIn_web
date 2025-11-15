@@ -11,39 +11,39 @@ import Link from "next/link";
 import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
 
 const settings = {
-  headline: 'Hello YouTube',
-  subheadline: 'Privacy-friendly web analytics made and hosted in Germany — powerful, cookie-free, and fully compliant with GDPR, CCPA, and PECR.',
+  headline: 'About Vikarin',
+  subheadline: 'Founded in 2021 with a clear goal: To help the healthcare sector with qualified temporary workers.',
   mainCTA: {
-    content: 'try it for free',
+    content: 'Google Play',
     href: '#'
   },
   secondaryCTA: {
-    content: 'view live demo',
+    content: 'Appstore',
     href: '#'
   },
   illustration: '/illustration.svg',
   reviews: [
     {
-      name: "John Doe",
-      designation: "Software Engineer",
+      name: "Cabdinuur Falaash",
+      designation: "Director",
       image:
         "https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80",
     },
     {
-      name: "Robert Johnson",
-      designation: "Product Manager",
+      name: "Mikaal Weli",
+      designation: "Duty coordinator",
       image:
         "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
     },
     {
-      name: "Jane Smith",
-      designation: "Data Scientist",
+      name: "Mustafa Sahid",
+      designation: "Doctor & course manager",
       image:
         "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
     },
     {
-      name: "Emily Davis",
-      designation: "UX Designer",
+      name: "Kaltum Adan",
+      designation: "HR responsible",
       image:
         "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
     },
@@ -58,13 +58,13 @@ const settings = {
 
 export default function Hero() {
   return (
-    <div className="space-y-12 md:space-y-20 lg:space-y-28 z-50 relative">
-      <Navbar />
+    <div className="space-y-12 md:space-y-20 lg:space-y-28 z-50 relative pt-40">
+      {/* <Navbar /> */}
 
       <section className="flex flex-col gap-8 lg:gap-11 items-center text-center">
         {/* Headline */}
-        <h1 className="text-black text-4xl md:text-6xl lg:text-hero font-medium tracking-tight leading-none xl:max-w-3/4">
-          <TextBlurEffect className='text-transparent bg-clip-text bg-gradient-to-b from-black to-black/60'>{settings.headline}</TextBlurEffect>
+        <h1 className="text-white text-4xl md:text-6xl lg:text-hero font-medium tracking-tight leading-none xl:max-w-3/4">
+          <TextBlurEffect className='text-transparent bg-clip-text bg-gradient-to-b from-white to-white/60'>{settings.headline}</TextBlurEffect>
         </h1>
 
         {/* Sub-headline */}
@@ -123,7 +123,7 @@ export default function Hero() {
         </SlideEffect>
 
         {/* Illustration */}
-        <SlideEffect className="relative" isSpring={false} duration={1.3}>
+        {/* <SlideEffect className="relative" isSpring={false} duration={1.3}>
           <Image
             src={settings.illustration}
             alt='illustration'
@@ -133,7 +133,7 @@ export default function Hero() {
             loading="eager"
           />
           <FadeEffect />
-        </SlideEffect>
+        </SlideEffect> */}
       </section>
     </div>
   )
